@@ -40,7 +40,7 @@ func getCsvClassMapping() (dataframe.DataFrame, error) {
 	}
 	ioContent := strings.NewReader(string(respBytes))
 
-	df := dataframe.ReadCSV(ioContent, dataframe.WithDelimiter(','), dataframe.HasHeader(true))
+	df := dataframe.ReadCSV(ioContent, dataframe.WithDelimiter(','), dataframe.HasHeader(false))
 	return df, nil
 }
 
